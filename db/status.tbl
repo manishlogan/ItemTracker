@@ -1,0 +1,2 @@
+_id integer AI PK
+status_name text

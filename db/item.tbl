@@ -1,0 +1,2 @@
+_id integer autoincrement PK
+name text
