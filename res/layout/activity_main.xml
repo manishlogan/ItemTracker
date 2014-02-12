@@ -14,7 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="@string/borrowedItemsBtn" />
+        android:text="@string/borrowedItemsBtn" 
+        android:onClick="showBorrowedItems"/>
 
     <Button
         android:id="@+id/lentItemsButton"
@@ -22,7 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/borrowedItemsButton"
         android:layout_below="@+id/borrowedItemsButton"
-        android:text="@string/lentItemsBtn" />
+        android:text="@string/lentItemsBtn" 
+        android:onClick="showLentItems"/>
 
     <Button
         android:id="@+id/addBorrowedItemButton"
@@ -30,7 +32,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/lentItemsButton"
         android:layout_below="@+id/lentItemsButton"
-        android:text="@string/addBorrowedBtn" />
+        android:text="@string/addBorrowedBtn" 
+        android:onClick="addBorrowedItems"/>
 
     <Button
         android:id="@+id/addLentItemButton"
@@ -38,7 +41,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/addBorrowedItemButton"
         android:layout_below="@+id/addBorrowedItemButton"
-        android:text="@string/addLentItemBtn" />
+        android:text="@string/addLentItemBtn" 
+        android:onClick="addLentItems"/>
 
     <Button
         android:id="@+id/viewActivityButton"
@@ -46,6 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/addLentItemButton"
         android:layout_below="@+id/addLentItemButton"
-        android:text="@string/viewActivityBtn" />
+        android:text="@string/viewActivityBtn" 
+        android:onClick="showActivity"/>
 
 </RelativeLayout>

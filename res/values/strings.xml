@@ -7,5 +7,12 @@
     <string name="lentItemsBtn">Lent Items</string>
     <string name="addBorrowedBtn">Add Borrowed Item</string>
     <string name="addLentItemBtn">Add Lent Item</string>
-	<string name="viewActivityBtn">View Activity</string>
+    <string name="viewActivityBtn">View Activity</string>
+    <string name="title_activity_borrowed_items">Borrowed Items</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_lent_items">Lent Items</string>
+    <string name="title_activity_add_lent_item">Add Lent Item</string>
+    <string name="title_activity_add_borrowed_item">Add Borrowed Item</string>
+    <string name="title_activity_view">Activity</string>
+
 </resources>
