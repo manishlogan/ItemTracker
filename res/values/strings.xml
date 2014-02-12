@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Track Your Items</string>
+    <string name="action_settings">Settings</string>
+    <string name="borrowedItemsBtn">Borrowed Items</string>
+    <string name="lentItemsBtn">Lent Items</string>
+    <string name="addBorrowedBtn">Add Borrowed Item</string>
+    <string name="addLentItemBtn">Add Lent Item</string>
+	<string name="viewActivityBtn">View Activity</string>
+</resources>
