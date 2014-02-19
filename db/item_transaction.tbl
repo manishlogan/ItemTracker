@@ -3,3 +3,4 @@ item_id integer
 category_id integer
 status_id integer
 person_id integer
+due_date text
