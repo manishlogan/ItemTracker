@@ -14,5 +14,17 @@
     <string name="title_activity_add_lent_item">Add Lent Item</string>
     <string name="title_activity_add_borrowed_item">Add Borrowed Item</string>
     <string name="title_activity_view">Activity</string>
-
+    <string name="item_name">Item Name</string>
+    <string name="enter_item_name">Item Name</string>
+    <string name="borrower">Borrower</string>
+    <string name="name_borrower">Name of borrower</string>
+    <string name="name">Name</string>
+    <string name="category">Category</string>
+    <string name="due_date">Due Date</string>
+    <string name="save">Save</string>
+    <string name="title_activity_select_person">Select Person</string>
+    <string name="title_activity_select_category">Select Category</string>
+    <string name="add_new_person">Add New Person</string>
+    <string name="title_activity_add_person">Add Person</string>
+	<string name="add">Add</string>
 </resources>
