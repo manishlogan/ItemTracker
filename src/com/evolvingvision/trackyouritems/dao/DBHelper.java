@@ -36,7 +36,8 @@ public class DBHelper extends SQLiteOpenHelper{
 	private final static String CREATE_ITEM_TRANSACTION_TABLE = "create table "+
 			ItemTransactionTable.TABLE_NAME + "("+ItemTransactionTable.ID + " Integer Primary Key,"+
 			ItemTransactionTable.ITEM_ID + " integer,"+ItemTransactionTable.CATEGORY_ID+" integer,"+
-			ItemTransactionTable.CATEGORY_ID+" integer,"+ItemTransactionTable.PERSON_ID+" integer)";
+			ItemTransactionTable.PERSON_ID+" integer,"+
+			ItemTransactionTable.DUE_DATE+" text)";
 	
 	public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);

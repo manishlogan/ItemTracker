@@ -10,4 +10,6 @@ public class ItemTransactionTable extends AbstractTable {
 	public static final String STATUS_ID = "status_id";
 	
 	public static final String PERSON_ID = "person_id";
+	
+	public static final String DUE_DATE = "due_date";
 }
