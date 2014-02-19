@@ -50,6 +50,18 @@
             android:name="com.evolvingvision.trackyouritems.ViewActivity"
             android:label="@string/title_activity_view" >
         </activity>
+        <activity
+            android:name="com.evolvingvision.trackyouritems.SelectPersonActivity"
+            android:label="@string/title_activity_select_person" >
+        </activity>
+        <activity
+            android:name="com.evolvingvision.trackyouritems.SelectCategoryActivity"
+            android:label="@string/title_activity_select_category" >
+        </activity>
+        <activity
+            android:name="com.evolvingvision.trackyouritems.AddPersonActivity"
+            android:label="@string/title_activity_add_person" >
+        </activity>
     </application>
 
 </manifest>
