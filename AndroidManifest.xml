@@ -62,6 +62,10 @@
             android:name="com.evolvingvision.trackyouritems.AddPersonActivity"
             android:label="@string/title_activity_add_person" >
         </activity>
+        <activity
+            android:name="com.evolvingvision.trackyouritems.AddCategoryActivity"
+            android:label="@string/title_activity_add_category" >
+        </activity>
     </application>
 
 </manifest>

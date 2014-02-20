@@ -25,6 +25,9 @@
     <string name="title_activity_select_person">Select Person</string>
     <string name="title_activity_select_category">Select Category</string>
     <string name="add_new_person">Add New Person</string>
+    <string name="add_new_category">Add New Category</string>
     <string name="title_activity_add_person">Add Person</string>
-	<string name="add">Add</string>
+    <string name="add">Add</string>
+    <string name="title_activity_add_category">Add Category</string>
+
 </resources>

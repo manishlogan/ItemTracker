@@ -6,8 +6,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".AddPersonActivity" >
-
+    tools:context=".AddCategoryActivity" >
+	
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
@@ -18,25 +18,24 @@
         android:layout_marginTop="32dp"
         android:text="@string/name"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <EditText
-        android:id="@+id/newPersonName"
+    
+    <EditText 
+        android:id="@+id/newCategoryName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView1"
         android:layout_alignBottom="@+id/textView1"
+        android:layout_alignBaseline="@+id/textView1"
         android:layout_alignParentRight="true"
         android:ems="10"
-        android:inputType="textPersonName" />
-
-    <Button
+        android:inputType="textPersonName"/>
+    
+     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/newPersonName"
-        android:layout_below="@+id/newPersonName"
+        android:layout_alignRight="@+id/newCategoryName"
+        android:layout_below="@+id/newCategoryName"
         android:layout_marginTop="16dp"
         android:text="@string/save" 
         android:onClick="save"/>
-
 </RelativeLayout>

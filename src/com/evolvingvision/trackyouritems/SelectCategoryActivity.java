@@ -33,4 +33,17 @@ public class SelectCategoryActivity extends ListActivity {
 		setResult(202,data);
 		finish();
 	}
+	
+	public void addCategory(View view){
+		Intent nextActivity = new Intent(this, AddCategoryActivity.class);
+		startActivityForResult(nextActivity,204);
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if(resultCode == 204){
+			setResult(202,data);
+			finish();
+		}
+	}
 }
