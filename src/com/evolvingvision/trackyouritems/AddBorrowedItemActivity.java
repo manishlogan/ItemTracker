@@ -1,14 +1,23 @@
 package com.evolvingvision.trackyouritems;
 
+import com.evolvingvision.trackyouritems.dao.TrackYourItemsDao;
+import com.evolvingvision.trackyouritems.entity.Category;
+import com.evolvingvision.trackyouritems.entity.Person;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class AddBorrowedItemActivity extends Activity {
 
+	private Person person;
+	
+	private Category category;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -33,7 +42,18 @@ public class AddBorrowedItemActivity extends Activity {
 	}
 	
 	public void save(View view){
-		//TODO : Write logic to add data to DB here
+		EditText itemNameTxt = (EditText)findViewById(R.id.itemName);
+		String itemName = itemNameTxt.getText().toString();
+		long itemID = TrackYourItemsDao.addItem(this, itemName);
+		long transactionID = TrackYourItemsDao.addTransaction(this,itemID,category.getCategoryID(),Constants.BORROWED_STATUS,person.getPersonID());
+		if(transactionID != -1){
+			Toast.makeText(this, "Borrowed Item Added", Toast.LENGTH_SHORT).show();
+		}else{
+			Toast.makeText(this, "Failed to add Borrowed Item", Toast.LENGTH_SHORT).show();
+		}
+		
+		Intent nextActivity = new Intent(this, MainActivity.class);
+		startActivity(nextActivity);
 	}
 	
 	@Override
@@ -41,11 +61,15 @@ public class AddBorrowedItemActivity extends Activity {
 		if(requestCode == 201 && resultCode == 201){
 			EditText personName = (EditText)findViewById(R.id.personName);
 			String name = data.getStringExtra(Constants.PERSON_NAME);
+			long id = data.getLongExtra(Constants.PERSON_ID,0);
+			person = new Person(id, name);
 			personName.setText(name);
 		}else if(requestCode == 202 && resultCode == 202){
-			EditText categoryName = (EditText)findViewById(R.id.categoryName);
-			String category = data.getStringExtra(Constants.CATEGORY_NAME);
-			categoryName.setText(category);
+			EditText categoryNameText = (EditText)findViewById(R.id.categoryName);
+			String categoryName = data.getStringExtra(Constants.CATEGORY_NAME);
+			long id = data.getLongExtra(Constants.CATEGORY_ID, 0); 
+			category = new Category(id, categoryName);
+			categoryNameText.setText(categoryName);
 		}
 	}
 }

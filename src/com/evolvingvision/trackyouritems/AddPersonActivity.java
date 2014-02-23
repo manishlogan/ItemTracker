@@ -2,6 +2,7 @@ package com.evolvingvision.trackyouritems;
 
 import com.evolvingvision.trackyouritems.dao.DBHelper;
 import com.evolvingvision.trackyouritems.dao.table.PersonTable;
+import com.evolvingvision.trackyouritems.entity.Person;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -34,10 +35,12 @@ public class AddPersonActivity extends Activity {
 		
 		ContentValues values = new ContentValues();
 		values.put(PersonTable.PERSON_NAME, name);
-		System.out.println(database.insert(PersonTable.TABLE_NAME, null, values));
+		long id = database.insert(PersonTable.TABLE_NAME, null, values);
+		Person person = new Person(id,name);
 		
 		Intent result = new Intent();
 		result.putExtra(Constants.PERSON_NAME, name);
+		result.putExtra("Person ID", id);
 		setResult(203, result);
 		finish();
 	}

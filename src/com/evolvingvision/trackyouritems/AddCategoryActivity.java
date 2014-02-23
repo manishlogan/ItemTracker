@@ -34,10 +34,11 @@ public class AddCategoryActivity extends Activity {
 		
 		ContentValues values = new ContentValues();
 		values.put(CategoryTable.COL_CATEGORY_NAME, name);
-		System.out.println(database.insert(CategoryTable.TABLE_NAME, null, values));
+		long id = database.insert(CategoryTable.TABLE_NAME, null, values);
 		
 		Intent result = new Intent();
 		result.putExtra(Constants.CATEGORY_NAME, name);
+		result.putExtra(Constants.CATEGORY_ID, id);
 		setResult(204, result);
 		finish();
 	}
