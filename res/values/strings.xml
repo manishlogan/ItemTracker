@@ -17,6 +17,7 @@
     <string name="item_name">Item Name</string>
     <string name="enter_item_name">Item Name</string>
     <string name="borrower">Borrower</string>
+    <string name="lender">Lender</string>
     <string name="name_borrower">Name of borrower</string>
     <string name="name">Name</string>
     <string name="category">Category</string>
