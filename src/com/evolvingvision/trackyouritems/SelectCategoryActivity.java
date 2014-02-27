@@ -1,5 +1,11 @@
 package com.evolvingvision.trackyouritems;
 
+import java.util.ArrayList;
+
+import com.evolvingvision.trackyouritems.adapter.CategoryAdapter;
+import com.evolvingvision.trackyouritems.dao.TrackYourItemsDao;
+import com.evolvingvision.trackyouritems.entity.Category;
+
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,8 +21,8 @@ public class SelectCategoryActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_select_category);
 		
-		String values[] = {"LOGAN","Manish","Jain"};
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line,values);
+		ArrayList<Category> categories = TrackYourItemsDao.getCategories(this);
+		CategoryAdapter adapter = new CategoryAdapter(this, categories);
 		setListAdapter(adapter);
 	}
 
@@ -29,7 +35,9 @@ public class SelectCategoryActivity extends ListActivity {
 	
 	@Override
 	protected void onListItemClick(ListView listView, View view, int position, long rowID) {
-		Intent data = new Intent().putExtra("Category", (String)listView.getItemAtPosition(position));
+		Intent data = new Intent();
+		data.putExtra(Constants.CATEGORY_NAME, ((Category)listView.getItemAtPosition(position)).getCategoryName());
+		data.putExtra(Constants.CATEGORY_ID, ((Category)listView.getItemAtPosition(position)).getCategoryID());
 		setResult(202,data);
 		finish();
 	}
