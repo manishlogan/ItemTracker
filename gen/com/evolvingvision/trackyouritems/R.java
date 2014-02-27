@@ -54,6 +54,8 @@ public final class R {
         public static final int activity_select_category=0x7f030007;
         public static final int activity_select_person=0x7f030008;
         public static final int activity_view=0x7f030009;
+        public static final int category=0x7f03000a;
+        public static final int person=0x7f03000b;
     }
     public static final class menu {
         public static final int add_borrowed_item=0x7f070000;

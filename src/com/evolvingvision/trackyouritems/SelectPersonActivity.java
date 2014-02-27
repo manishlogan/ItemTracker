@@ -1,12 +1,17 @@
 package com.evolvingvision.trackyouritems;
 
+import java.util.ArrayList;
+
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.evolvingvision.trackyouritems.adapter.PersonAdapter;
+import com.evolvingvision.trackyouritems.dao.TrackYourItemsDao;
+import com.evolvingvision.trackyouritems.entity.Person;
 
 public class SelectPersonActivity extends ListActivity {
 
@@ -15,11 +20,11 @@ public class SelectPersonActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_select_person);
 		
-		String values[] = {"LOGAN","Manish","Jain"};
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line,values);
+		ArrayList<Person> persons = TrackYourItemsDao.getPersons(this);
+		PersonAdapter adapter = new PersonAdapter(this, persons);
 		setListAdapter(adapter);
 	}
-
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -29,7 +34,9 @@ public class SelectPersonActivity extends ListActivity {
 	
 	@Override
 	protected void onListItemClick(ListView listView, View view, int position, long rowID) {
-		Intent data = new Intent().putExtra(Constants.PERSON_NAME, (String)listView.getItemAtPosition(position));
+		Intent data = new Intent();
+		data.putExtra(Constants.PERSON_NAME, ((Person)listView.getItemAtPosition(position)).getPersonName());
+		data.putExtra(Constants.PERSON_ID, ((Person)listView.getItemAtPosition(position)).getPersonID());
 		setResult(201,data);
 		finish();
 	}

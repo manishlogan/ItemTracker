@@ -40,7 +40,7 @@ public class AddPersonActivity extends Activity {
 		
 		Intent result = new Intent();
 		result.putExtra(Constants.PERSON_NAME, name);
-		result.putExtra("Person ID", id);
+		result.putExtra(Constants.PERSON_ID, id);
 		setResult(203, result);
 		finish();
 	}
