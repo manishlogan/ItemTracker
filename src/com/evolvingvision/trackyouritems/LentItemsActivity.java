@@ -1,5 +1,7 @@
 package com.evolvingvision.trackyouritems;
 
+import java.util.ArrayList;
+
 import android.annotation.TargetApi;
 import android.app.ListActivity;
 import android.os.Build;
@@ -7,7 +9,10 @@ import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
+
+import com.evolvingvision.trackyouritems.adapter.TransactionAdapter;
+import com.evolvingvision.trackyouritems.dao.TrackYourItemsDao;
+import com.evolvingvision.trackyouritems.entity.Transaction;
 
 public class LentItemsActivity extends ListActivity {
 
@@ -18,8 +23,8 @@ public class LentItemsActivity extends ListActivity {
 		// Show the Up button in the action bar.
 		setupActionBar();
 		
-		String values[] = {"LOGAN","Manish","Jain"};
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line,values);
+		ArrayList<Transaction> lentItems = TrackYourItemsDao.getTransactionItems(this,Constants.LENT_STATUS_ID);
+		TransactionAdapter adapter = new TransactionAdapter(this, lentItems);
 		setListAdapter(adapter);
 	}
 
