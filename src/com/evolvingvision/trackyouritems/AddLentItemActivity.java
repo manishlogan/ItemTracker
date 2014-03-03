@@ -45,7 +45,7 @@ public class AddLentItemActivity extends Activity {
 		EditText itemNameTxt = (EditText)findViewById(R.id.itemName);
 		String itemName = itemNameTxt.getText().toString();
 		long itemID = TrackYourItemsDao.addItem(this, itemName);
-		long transactionID = TrackYourItemsDao.addTransaction(this,itemID,category.getCategoryID(),Constants.LENT_STATUS,person.getPersonID());
+		long transactionID = TrackYourItemsDao.addTransaction(this,itemID,category.getCategoryID(),Constants.LENT_STATUS_ID,person.getPersonID());
 		if(transactionID != -1){
 			Toast.makeText(this, "Lent Item Added", Toast.LENGTH_SHORT).show();
 		}else{

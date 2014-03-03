@@ -45,7 +45,7 @@ public class AddBorrowedItemActivity extends Activity {
 		EditText itemNameTxt = (EditText)findViewById(R.id.itemName);
 		String itemName = itemNameTxt.getText().toString();
 		long itemID = TrackYourItemsDao.addItem(this, itemName);
-		long transactionID = TrackYourItemsDao.addTransaction(this,itemID,category.getCategoryID(),Constants.BORROWED_STATUS,person.getPersonID());
+		long transactionID = TrackYourItemsDao.addTransaction(this,itemID,category.getCategoryID(),Constants.BORROWED_STATUS_ID,person.getPersonID());
 		if(transactionID != -1){
 			Toast.makeText(this, "Borrowed Item Added", Toast.LENGTH_SHORT).show();
 		}else{

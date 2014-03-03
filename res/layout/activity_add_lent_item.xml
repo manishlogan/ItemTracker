@@ -9,7 +9,7 @@
     tools:context=".AddLentItemActivity" >
 
      <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/transactItemName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -19,21 +19,21 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/transactPerson"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignLeft="@+id/transactItemName"
         android:layout_below="@+id/itemName"
         android:layout_marginTop="17dp"
         android:text="@string/borrower"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/transactPersonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView2"
-        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignBaseline="@+id/transactPerson"
+        android:layout_alignBottom="@+id/transactPerson"
         android:layout_alignLeft="@+id/itemName"
         android:layout_marginLeft="15dp"
         android:text=""
@@ -43,8 +43,8 @@
         android:id="@+id/itemName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView1"
-        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignBaseline="@+id/transactItemName"
+        android:layout_alignBottom="@+id/transactItemName"
         android:layout_alignLeft="@+id/personName"
         android:layout_toLeftOf="@+id/button1"
         android:ems="10"
@@ -54,9 +54,9 @@
         android:id="@+id/personName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignBottom="@+id/transactPersonName"
         android:layout_toLeftOf="@+id/button1"
-        android:layout_toRightOf="@+id/textView1"
+        android:layout_toRightOf="@+id/transactItemName"
         android:ems="10"
         android:inputType="textPersonName" 
         android:hint="@string/name"/>
@@ -86,8 +86,8 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/transactPerson"
+        android:layout_below="@+id/transactPersonName"
         android:layout_marginTop="17dp"
         android:text="@string/category"
         android:textAppearance="?android:attr/textAppearanceMedium" />

@@ -24,7 +24,7 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080011;
+        public static final int action_settings=0x7f080013;
         public static final int addBorrowedItemButton=0x7f08000e;
         public static final int addLentItemButton=0x7f08000f;
         public static final int borrowedItemsButton=0x7f08000c;
@@ -37,10 +37,12 @@ public final class R {
         public static final int newCategoryName=0x7f08000a;
         public static final int newPersonName=0x7f08000b;
         public static final int personName=0x7f080004;
-        public static final int textView1=0x7f080000;
-        public static final int textView2=0x7f080001;
-        public static final int textView3=0x7f080003;
+        public static final int textView1=0x7f080012;
         public static final int textView4=0x7f080007;
+        public static final int transactCategoryName=0x7f080011;
+        public static final int transactItemName=0x7f080000;
+        public static final int transactPerson=0x7f080001;
+        public static final int transactPersonName=0x7f080003;
         public static final int viewActivityButton=0x7f080010;
     }
     public static final class layout {
@@ -56,6 +58,7 @@ public final class R {
         public static final int activity_view=0x7f030009;
         public static final int category=0x7f03000a;
         public static final int person=0x7f03000b;
+        public static final int transaction_items=0x7f03000c;
     }
     public static final class menu {
         public static final int add_borrowed_item=0x7f070000;

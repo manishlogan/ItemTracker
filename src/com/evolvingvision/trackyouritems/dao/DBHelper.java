@@ -57,15 +57,15 @@ public class DBHelper extends SQLiteOpenHelper{
 
 	private void initializeStatus(SQLiteDatabase db) {
 		ContentValues lentStatus = new ContentValues();
-		lentStatus.put(StatusTable.ID, Constants.LENT_STATUS);
+		lentStatus.put(StatusTable.ID, Constants.LENT_STATUS_ID);
 		lentStatus.put(StatusTable.STATUS_NAME, "Lent");
 		
 		ContentValues borrowedStatus = new ContentValues();
-		borrowedStatus.put(StatusTable.ID, Constants.BORROWED_STATUS);
+		borrowedStatus.put(StatusTable.ID, Constants.BORROWED_STATUS_ID);
 		borrowedStatus.put(StatusTable.STATUS_NAME, "Borrowed");
 		
 		ContentValues returnedStatus = new ContentValues();
-		returnedStatus.put(StatusTable.ID, Constants.RETURNED_STATUS);
+		returnedStatus.put(StatusTable.ID, Constants.RETURNED_STATUS_ID);
 		returnedStatus.put(StatusTable.STATUS_NAME, "Returned");
 	}
 
