@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.evolvingvision.trackyouritems.Constants;
@@ -44,7 +45,8 @@ public class TransactionAdapter extends BaseAdapter{
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		View view=convertView;
-        if(convertView==null)
+        
+		if(convertView==null)
             view = inflater.inflate(R.layout.transaction_items, null);
  
         TextView itemNameText = (TextView)view.findViewById(R.id.transactItemName);
@@ -60,6 +62,20 @@ public class TransactionAdapter extends BaseAdapter{
         }else if(transaction.getStatus().getStatusID() == Constants.LENT_STATUS_ID){
         	personTypeText.setText(Constants.BORROWER);
         }
+        
+        Button button = (Button)view.findViewById(R.id.returned);
+        button.setTag(position);
+        
+        button.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				int position = (Integer)v.getTag();
+				data.remove(position);
+				notifyDataSetChanged();
+			}
+		});
+        
         return view;
 	}
 }

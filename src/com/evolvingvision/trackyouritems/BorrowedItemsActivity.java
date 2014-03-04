@@ -61,5 +61,4 @@ public class BorrowedItemsActivity extends ListActivity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-
 }

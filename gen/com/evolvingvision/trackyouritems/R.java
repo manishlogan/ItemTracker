@@ -24,7 +24,7 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080013;
+        public static final int action_settings=0x7f080014;
         public static final int addBorrowedItemButton=0x7f08000e;
         public static final int addLentItemButton=0x7f08000f;
         public static final int borrowedItemsButton=0x7f08000c;
@@ -37,6 +37,7 @@ public final class R {
         public static final int newCategoryName=0x7f08000a;
         public static final int newPersonName=0x7f08000b;
         public static final int personName=0x7f080004;
+        public static final int returned=0x7f080013;
         public static final int textView1=0x7f080012;
         public static final int textView4=0x7f080007;
         public static final int transactCategoryName=0x7f080011;
@@ -91,6 +92,7 @@ public final class R {
         public static final int lentItemsBtn=0x7f050003;
         public static final int name=0x7f050012;
         public static final int name_borrower=0x7f050011;
+        public static final int returned=0x7f05001d;
         public static final int save=0x7f050015;
         public static final int title_activity_add_borrowed_item=0x7f05000b;
         public static final int title_activity_add_category=0x7f05001c;
